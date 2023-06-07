@@ -1,0 +1,31 @@
+#System files
+.DS_Store
+Thumbs.db
+
+# Editor directories and files
+/.settings
+/.project
+/.buildpath
+/.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Runtime
+runtime/*
+
+#Project files
+common/config.php
+
+Web/node_modules/
+Web/npm-debug.log*
+Web/yarn-debug.log*
+Web/yarn-error.log*
+Web/test/unit/coverage
+Web/test/e2e/reports
+Web/selenium-debug.log
+Web/package-lock.json
+public/debug.json
+

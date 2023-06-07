@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>招聘</title>
+    <meta name="renderer" content="webkit">
+    <meta name="keywords" content="招聘"/>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #f3f3f4;
+            font-family: Helvetica Neue, Helvetica, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif;
+            font-size: 12px;
+            line-height: 1.5;
+            color: #414a60;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .preview {
+            width: 900px;
+            min-height: 1124px;
+            background: #fff;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .container {
+            position: relative;
+            box-sizing: border-box;
+            background: #fff;
+            padding: 10px 0;
+        }
+
+        .flex-box {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tit {
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            padding-bottom: 10px;
+        }
+
+        .item-box {
+            margin: 0 20px 10px;
+            color: #333;
+            border: 1px solid #ccc;
+        }
+
+        .attr {
+            color: #333;
+            line-height: 18px;
+            text-align: left;
+        }
+
+        .attr span {
+            display: inline-block;
+            margin: 1px 0;
+            padding-right: 1%;
+            min-width: 22%;
+        }
+
+        .attr i {
+            display: inline-block;
+            font-style: normal;
+            color: #ccc;
+            margin-right: 5px;
+        }
+
+        .title {
+            padding: 3px 15px;
+            color: #000;
+            border-bottom: 1px solid #ccc;
+            font-weight: bold;
+            font-size: 13px;
+        }
+
+        .body {
+            padding: 7px 10px;
+        }
+
+        .small span {
+            min-width: 18%;
+        }
+
+        .info span {
+            min-width: 31%;
+        }
+
+        .item {
+            border-bottom: 1px dashed #ccc;
+            margin-bottom: 5px;
+            padding-bottom: 5px;
+        }
+
+        .item:last-child {
+            border: none;
+            margin: 0;
+        }
+
+        .item .other {
+            font-size: 13px;
+            color: #999;
+            float: right;
+        }
+
+        .txt {
+            margin-top: 5px;
+            line-height: 1.4;
+            text-align: justify;
+            color: #333;
+            font-size: 10px;
+        }
+
+        .desc {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .foot {
+            margin: 20px 30px;
+            text-align: right;
+        }
+
+        .foot span {
+            display: inline-block;
+            width: 120px;
+            border-bottom: 1px solid #333;
+            margin-right: 15px;
+            margin-left: 10px;
+        }
+
+        .tn {
+            height: 22px;
+            line-height: 22px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<div class="preview">
+    <div class="container">
+        <div class="flex-box">
+            <div class="tit">入职人员信息登记表</div>
+            <div class="item-box">
+                <div class="title">入职信息</div>
+                <div class="body">
+                    <div class="info attr">
+                        <span><i>入职部门:</i><?php echo $material_content['apply_department'];?></span>
+                        <span><i>入职岗位:</i><?php echo $material_content['apply_job'];?></span>
+                        <span><i>个人状态:</i><?php echo $material_content['current_job_status'];?></span>
+                    </div>
+                    <div class="info attr">
+                        <span><i>入职日期:</i><?php echo $material_content['join_date'];?></span>
+                        <span><i>目前薪资:</i><?php echo $material_content['current_job_pay'];?></span>
+                    </div>
+                </div>
+            </div>
+            <div class="item-box">
+                <div class="title">基本信息</div>
+                <div class="body">
+                    <div class="attr">
+                        <span><i>姓名:</i><?php echo $material_content['personal_truename'];?></span>
+                        <span><i>姓名全拼:</i><?php echo $material_content['personal_truename_py'] ?? '';?></span>
+                        <span><i>电话:</i><?php echo $material_content['personal_phone'];?></span>
+                        <span><i>微信号:</i><?php echo $material_content['personal_wechat'];?></span>
+                        <span><i>性别:</i><?php echo $material_content['personal_sex'];?></span>
+                        <span><i>生日:</i><?php echo $material_content['personal_birthday'];?></span>
+                        <span><i>民族:</i><?php echo $material_content['personal_nation'];?></span>
+                        <span><i>籍贯:</i><?php echo $material_content['personal_nation_place'];?></span>
+                        <span><i>政治面貌:</i><?php echo $material_content['personal_politics_role'];?></span>
+                        <span><i>学历:</i><?php echo $material_content['personal_education'];?></span>
+                        <span><i>健康状况:</i><?php echo $material_content['personal_health'];?></span>
+                        <span><i>婚姻状况:</i><?php echo $material_content['personal_marry_status'];?></span>
+                        <span><i>信箱:</i><?php echo $material_content['personal_email'];?></span>
+                        <span><i>紧急联系人:</i><?php echo $material_content['emergency_contact_name'];?></span>
+                        <span><i>与本人关系:</i><?php echo $material_content['emergency_contact_relation'];?></span>
+                        <span><i>联系方式:</i><?php echo $material_content['emergency_contact_phone'];?></span>
+                    </div>
+                    <div class="attr">
+                        <span><i>身份证地址:</i><?php echo $material_content['personal_idcard_address'];?></span>
+                        <span><i>身份证号码:</i><?php echo $material_content['personal_idcard'];?></span>
+                        <span><i>现有效地址:</i><?php echo $material_content['personal_address'];?></span>
+                    </div>
+                </div>
+            </div>
+            <div class="item-box">
+                <div class="title">原保险及用工情况</div>
+                <div class="body">
+                    <div class="attr">
+                        <span><i>户口类别:</i><?php echo $material_content['social_household_type'];?></span>
+                        <span><i>是否缴过社会保险:</i><?php echo $material_content['social_insurance_is_pay'] ? '是' : '否';?></span>
+                        <span><i>投保城市:</i><?php echo $material_content['social_insurance_city'] ?: '暂无';?></span>
+                        <span><i>投保时间:</i><?php echo $material_content['social_insurance_start_date']? $material_content['social_insurance_start_date'] . '<i>
+                            至</i>' . $material_content['social_insurance_end_date'] : '暂无';?></span>
+                        <span><i>是否缴过住房公积金:</i><?php echo $material_content['housing_fund_is_pay'] ? '是' : '否';?></span>
+                        <span><i>投保城市:</i><?php echo  $material_content['housing_fund_city'] ?: '暂无';?></span>
+                        <span><i>投保单位:</i> <?php echo $material_content['housing_fund_company'] ?: '暂无';?></span>
+                    </div>
+                    <div class="txt"><b>特别提醒：</b>请确保您在入职公司<b>10日内</b>，您的原单位或您自己缴纳的社会保险和公积金都已处于停止缴费的状态。有关社保停缴信息可直接与原单位联系确认。如因员工个人原因导致公司2个月内未能投保社保成功，个人应自行提出离职并承担由此造成的全部经济损失及法律后果，并赔偿由此给我司造成的所有经济损失（如滞纳金等）。
+                    </div>
+                </div>
+            </div>
+            <div class="item-box">
+                <div class="title">工作经历</div>
+                <div class="body">
+                    <?php if(isset($material_content['history_job']) && $material_content['history_job']) { ?>
+                        <?php foreach($material_content['history_job'] as $value) { ?>
+                        <div class="item">
+                            <div class="tn"><b><?php echo $value['company'];?></b> <span class="other"><?php echo $value['time'];?></span></div>
+                            <div class="attr">
+                                <span><i>离职原因:</i> <?php echo $value['leave_reason'];?></span>
+                            </div>
+                            <div class="info attr">
+                                <span><i>职务:</i> <?php echo $value['job'];?></span>
+                                <span><i>薪资:</i> <?php echo $value['salary'];?></span>
+                                <span><i>证明人:</i> <?php echo $value['witness'];?></span>
+                            </div>
+                        </div>
+                        <?php } ?>
+                    <?php } else {?>
+                        暂无
+                    <?php } ?>
+                </div>
+            </div>
+            <div class="item-box">
+                <div class="title">教育经历</div>
+                <div class="body">
+                    <?php if(isset($material_content['history_education']) && $material_content['history_education']) { ?>
+                        <?php foreach($material_content['history_education'] as $value) { ?>
+                        <div class="item">
+                            <div class="tn"><b><?php echo $value['school'];?></b> <span class="other"><?php echo $value['time'];?></span></div>
+                            <div class="info attr">
+                                <span><i>专业:</i> <?php echo $value['specialty'];?></span>
+                                <span><i>学历:</i> <?php echo $value['education'];?></span>
+                                <span><i>学位:</i> <?php echo $value['degree'];?></span>
+                            </div>
+                        </div>
+                        <?php } ?>
+                    <?php } else {?>
+                        暂无
+                    <?php } ?>
+                </div>
+            </div>
+            <div class="item-box">
+                <div class="title">培训情况</div>
+                <div class="body">
+                    <?php if(isset($material_content['history_train']) && $material_content['history_train']) { ?>
+                        <?php foreach($material_content['history_train'] as $value) { ?>
+                        <div class="item">
+                            <div class="tn"><b><?php echo $value['trainer'];?></b> <span class="other"><?php echo $value['time'];?></span></div>
+                            <div class="info attr">
+                                <span><i>培训内容:</i> <?php echo $value['content'];?></span>
+                                <span><i>所获证书:</i> <?php echo $value['certificate'];?></span>
+                                <span><i>证书编号:</i> <?php echo $value['certificate_number'];?></span>
+                            </div>
+                        </div>
+                        <?php } ?>
+                    <?php } else {?>
+                        暂无
+                    <?php } ?>
+                </div>
+            </div>
+            <div class="item-box">
+                <div class="title">家庭资料</div>
+                <div class="body">
+                    <?php if(isset($material_content['family_members']) && $material_content['family_members']) { ?>
+                        <?php foreach($material_content['family_members'] as $value) { ?>
+                        <div class="small attr">
+                            <span><i>姓名:</i><?php echo $value['name'];?></span>
+                            <span><i>联系电话:</i><?php echo $value['phone'];?></span>
+                            <span><i>关系:</i><?php echo $value['relation'];?></span>
+                            <span><i>工作单位:</i><?php echo $value['unit'];?></span>
+                            <span><i>职务:</i><?php echo $value['title'];?></span>
+                        </div>
+                        <?php } ?>
+                    <?php } else {?>
+                     暂无
+                    <?php } ?>
+                </div>
+            </div>
+            <div class="item-box">
+                <div class="title">入司渠道</div>
+                <div class="body">
+                    <div class="attr">
+                        <?php if(isset($material_content['join_channel'])){ ?>
+                            <?php if($material_content['join_channel'] == '互联网' || $material_content['join_channel'] == '其他') {?>
+                                <span><i>来源:</i><?php echo $material_content['join_channel'] . '(' . $material_content['join_channel_name'] . ')';?></span>
+                            <?php }else{?>
+                                <span><i>来源:</i><?php echo $material_content['join_channel']; ?></span>
+                            <?php } ?>
+                        <?php } else {?>
+                            <span><i>来源:</i>暂无</span>
+                        <?php } ?>
+                        <span><i>公司员工推荐:</i> <?php echo $material_content['inner_recommend_name'] ? $material_content['inner_recommend_name'] . '(' . $material_content['inner_recommend_relation'] .')' : '暂无' ?></span>
+                        <span><i>您是否有亲友在本公司工作:</i> <?php echo $material_content['family_member_name'] ? $material_content['family_member_name'] . '(' . $material_content['family_member_job'] . '-' . $material_content['family_member_relation']  .  ')' : '暂无' ?></span>
+                    </div>
+                </div>
+            </div>
+            <div class="item-box">
+                <div class="title">本人声明</div>
+                <div class="body">
+                    <div class="desc">
+                        <p>1、本人同意向公司提供以上个人信息，且授权公司对本人个人信息进行合理的保管、使用和处理；</p>
+                        <p>2、本人承诺所填写的内容及所涉及的资料真实，无任何虚假信息，面试通过后，同意本公司做相应的背景调查；</p>
+                        <p>3、本人承诺若入职贵公司前，会和原公司解除劳动关系，且无与贵公司工作相冲突的竞业限制等限制性条件；</p>
+                        <p>4、本人同意公司针对此表所填信息及所涉及的资料的真实性进行的调查核实；</p>
+                        <p>5、若此表所填信息和所涉及的资料与事实不一致的，贵公司有权随时单方解除届时签订的《劳动合同》。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="foot">
+                签名:<span></span>日期：<span></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

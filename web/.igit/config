@@ -1,0 +1,10 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+[remote "gitlab"]
+	url = git@gitlab.tanwan.com:qianduan/hr-tanwan-com.git
+	fetch = +refs/heads/*:refs/remotes/gitlab/*

@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>招聘</title>
+    <meta name="renderer" content="webkit">
+    <meta name="keywords" content="招聘"/>
+    <link href="/frontstatic/common/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="/frontstatic/common/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="/frontstatic/jobseekermaterial/css/style.css?v=4.1.0" rel="stylesheet">
+
+</head>
+<body class="gray-bg">
+<div class="header">入职人员信息登记表</div>
+<form class="cmxform" id="commentForm" method="get" action="">
+    <div class="container">
+
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5><span class="glyphicon glyphicon-star"></span>入职信息
+                    <small class="text-danger">(所有都为必填项)</small>
+                </h5>
+                <div class="ibox-tools">
+                    <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                </div>
+            </div>
+            <div class="ibox-content">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label>入职部门</label>
+                            <input type="text" placeholder="" class="form-control" id="apply_department"
+                                   name="apply_department"/>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label>入职岗位</label>
+                            <input type="text" placeholder="" class="form-control" name="apply_job">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>入职前个人状态</label>
+                            <div class="label-box">
+                                <label class="radio">
+                                    <input type="radio" name="current_job_status" value="已离职">已离职(解除劳动合同)
+                                    <i></i>
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="current_job_status" value="仍在职">仍在职
+                                    <i></i>
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="current_job_status" value="应届毕业生">应届毕业生
+                                    <i></i>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label>入职日期</label>
+                            <input type="date" placeholder="" name="join_date" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label>目前薪资</label>
+                            <input type="text" placeholder="" name="current_job_pay" class="form-control">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5><span class="glyphicon glyphicon-star"></span>基本信息
+                    <small class="text-danger">(所有都为必填项)</small>
+                </h5>
+                <div class="ibox-tools">
+                    <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                </div>
+            </div>
+            <div class="ibox-content">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label>姓名</label>
+                            <input type="text" placeholder="请输入姓名" name="personal_truename" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label>姓名拼音（全拼）</label>
+                            <input type="text" placeholder="例如 张三 请填 zhangsan" name="personal_truename_py" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label>性别</label>
+                            <select class="form-control m-b" name="personal_sex">
+                                <option value="男">男</option>
+                                <option value="女">女</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label>出生年月</label>
+                            <input type="date" placeholder="格式：2020.01" name="personal_birthday" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label>民族</label>
+                            <input type="text" placeholder="" name="personal_nation" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label>籍贯</label>
+                            <input type="text" placeholder="例如（广东广州）" name="personal_nation_place" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label>政治面貌</label>
+                            <select class="form-control m-b" name="personal_politics_role">
+                                <option value="群众">群众</option>
+                                <option value="团员">团员</option>
+                                <option value="预备党员">预备党员</option>
+                                <option value="正式党员">正式党员</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label>最高学历</label>
+                            <select class="form-control m-b" name="personal_education">
+                                <option value="小学">小学</option>
+                                <option value="初中">初中</option>
+                                <option value="中专">中专</option>
+                                <option value="高中">高中</option>
+                                <option value="高技">高技</option>
+                                <option value="大专">大专</option>
+                                <option value="本科">本科</option>
+                                <option value="硕士">硕士</option>
+                                <option value="博士">博士</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label>健康状况</label>
+                            <input type="text" placeholder="" class="form-control" name="personal_health">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label>婚姻状况</label>
+                            <select class="form-control m-b" name="personal_marry_status">
+                                <option value="已婚">已婚</option>
+                                <option value="未婚">未婚</option>
+                                <option value="离异">离异</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label>电子信箱</label>
+                            <input type="email" placeholder="" class="form-control" name="personal_email">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label>微信号</label>
+                            <input type="text" placeholder="" class="form-control" name="personal_wechat">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label>身份证地址</label>
+                            <input type="text" placeholder="" class="form-control" name="personal_idcard_address">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label>身份证号码</label>
+                            <input type="text" placeholder="" class="form-control" name="personal_idcard">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label>现有效地址</label>
+                            <input type="text" placeholder="" class="form-control" name="personal_address">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label>移动电话</label>
+                            <input type="text" placeholder="" class="form-control" name="personal_phone">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label>紧急联系人</label>
+                            <input type="text" placeholder="" class="form-control" name="emergency_contact_name">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label>与本人关系</label>
+                            <input type="text" placeholder="" class="form-control" name="emergency_contact_relation">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label>联系方式</label>
+                            <input type="text" placeholder="" class="form-control" name="emergency_contact_phone">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ibox">
+            <div class="ibox-title">
+                <h5><span class="glyphicon glyphicon-star"></span>原保险及用工情况</h5>
+                <div class="ibox-tools">
+                    <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                </div>
+            </div>
+            <div class="ibox-content">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label>户口类别</label>
+                            <select class="form-control m-b" name="social_household_type">
+                                <option value="本地城镇">本地城镇</option>
+                                <option value="本地农村">本地农村</option>
+                                <option value="外地城镇">外地城镇</option>
+                                <option value="外地农村">外地农村</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label>是否缴过社会保险</label>
+                            <select class="form-control m-b" name="social_insurance_is_pay">
+                                <option value="0">否</option>
+                                <option value="1">是</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label>投保城市</label>
+                            <input type="text" placeholder="" class="form-control" name="social_insurance_city">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label>投保时间</label>
+                            <div class="row row-small">
+                                <div class="col-md-6">
+                                    <input type="text" placeholder="开始(年-月)" class="form-control"
+                                           name="social_insurance_start_date">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" placeholder="结果(年-月)" class="form-control"
+                                           name="social_insurance_end_date">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="alert alert-warning"><b>特别提醒</b>：请确保您在入职公司<b>10日内</b>，您的原单位或您自己缴纳的社会保险和公积金都已处于停止缴费的状态。有关社保停缴信息可直接与原单位联系确认。如因员工个人原因导致公司2个月内未能投缴社保成功，个人应自行提出离职并承担由此造成的全部经济损失及法律后果，并赔偿由此给我司造成的所有经济损失（如滞纳金等）。 
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label>是否缴过住房公积金</label>
+                            <select class="form-control m-b" name="housing_fund_is_pay">
+                                <option value="0">否</option>
+                                <option value="1">是</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label>投缴城市</label>
+                            <input type="text" placeholder="" class="form-control" name="housing_fund_city">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label>投缴单位</label>
+                            <input type="text" placeholder="" class="form-control" name="housing_fund_company">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="ibox">
+            <div class="ibox-title">
+                <h5><span class="glyphicon glyphicon-star"></span>工作经历
+                    <small>请按照参加工作时间<span class="text-danger">由近到远的次序</span>填写</small><small class="text-danger">(必填项)</small>
+                </h5>
+                <div class="ibox-tools">
+                    <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                </div>
+            </div>
+            <div class="ibox-content">
+                <div class="row table-title">
+                    <div class="col-sm-2">起止时间</div>
+                    <div class="col-sm-2">工作单位名称</div>
+                    <div class="col-sm-2">职务</div>
+                    <div class="col-sm-2">离职原因</div>
+                    <div class="col-sm-2">薪资</div>
+                    <div class="col-sm-2">证明人/联系方式(座机)</div>
+                </div>
+                <div class="hr-line-dashed"></div>
+                <div class="list" id="workList"></div>
+                <div class="text-center">
+                    <div class="btn btn-white" onclick="$('#workModal').modal('show')"><i class="fa fa-plus-square"></i>
+                        添加工作经历
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ibox">
+            <div class="ibox-title">
+                <h5><span class="glyphicon glyphicon-star"></span>教育经历
+                    <small>请从<span class="text-danger">最高学历倒序</span>填写</small><small class="text-danger">(必填项)</small>
+                </h5>
+                <div class="ibox-tools">
+                    <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                </div>
+            </div>
+            <div class="ibox-content">
+                <div class="row table-title">
+                    <div class="col-sm-2">起止时间</div>
+                    <div class="col-sm-4">学校名称</div>
+                    <div class="col-sm-2">专业</div>
+                    <div class="col-sm-2">学历</div>
+                    <div class="col-sm-2">学位</div>
+                </div>
+                <div class="hr-line-dashed"></div>
+                <div class="list" id="education"></div>
+                <div class="text-center">
+                    <div class="btn btn-white" onclick="$('#educationModal').modal('show')"><i
+                            class="fa fa-plus-square"></i> 添加教育经历
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ibox">
+            <div class="ibox-title">
+                <h5><span class="glyphicon glyphicon-star"></span>培训情况</h5>
+                <div class="ibox-tools">
+                    <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                </div>
+            </div>
+            <div class="ibox-content">
+                <div class="row table-title">
+                    <div class="col-sm-2">起止时间</div>
+                    <div class="col-sm-3">培训/主办单位</div>
+                    <div class="col-sm-3">培训内容</div>
+                    <div class="col-sm-2">所获证书</div>
+                    <div class="col-sm-2">证书编号</div>
+                </div>
+                <div class="hr-line-dashed"></div>
+                <div class="list" id="training"></div>
+                <div class="text-center">
+                    <div class="btn btn-white" onclick="$('#trainingModal').modal('show')"><i
+                            class="fa fa-plus-square"></i> 添加培训情况
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ibox">
+            <div class="ibox-title">
+                <h5><span class="glyphicon glyphicon-star"></span>家庭资料<small class="text-danger">(必填项)</small></h5>
+                <div class="ibox-tools">
+                    <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                </div>
+            </div>
+            <div class="ibox-content">
+                <div class="row table-title">
+                    <div class="col-sm-2">姓名</div>
+                    <div class="col-sm-3">联系电话</div>
+                    <div class="col-sm-3">家庭成员与本人关系</div>
+                    <div class="col-sm-2">工作单位</div>
+                    <div class="col-sm-2">职务</div>
+                </div>
+                <div class="hr-line-dashed"></div>
+                <div class="list" id="family"></div>
+                <div class="text-center">
+                    <div class="btn btn-white" onclick="$('#familyModal').modal('show')"><i
+                            class="fa fa-plus-square"></i> 添加家庭资料
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ibox">
+            <div class="ibox-title">
+                <h5><span class="glyphicon glyphicon-star"></span>入司渠道</h5>
+                <div class="ibox-tools">
+                    <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                </div>
+            </div>
+            <div class="ibox-content">
+                <div class="label-box">
+                    来源：
+                    <label class="radio">
+                        <input type="radio" name="join_channel" value="平面媒介">平面媒介
+                        <i></i>
+                    </label>
+                    <label for="source2" class="radio">
+                        <input type="radio" name="join_channel" id="source2" value="互联网">互联网
+                        <i></i>
+                        <span class="other"><input type="text" name="join_channel_web" placeholder="请输入网站名"
+                                                   class="form-control"></span>
+                    </label>
+                    <label for="source3" class="radio">
+                        <input type="radio" name="join_channel" id="source3" value="招聘会">招聘会
+                        <i></i>
+                    </label>
+                    <label for="source4" class="radio">
+                        <input type="radio" name="join_channel" id="source4" value="猎头推荐">猎头推荐
+                        <i></i>
+                    </label>
+                    <label for="source5" class="radio">
+                        <input type="radio" name="join_channel" id="source5" value="其他">其他
+                        <i></i>
+                        <span class="other">
+              <input type="text" placeholder="请输入其它来源" name="join_channel_other" class="form-control">
+            </span>
+                    </label>
+                </div>
+                <div class="label-box">
+                    公司员工推荐：
+                    <label class="radio">
+                        <input type="radio" name="is_inner_recommend" value="0"> 否
+                        <i></i>
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="is_inner_recommend" value="1"> 是
+                        <i></i>
+                        <span class="other">
+              <input type="text" placeholder="这位员工是" name="inner_recommend_name" class="form-control">
+              <input type="text" placeholder="与该员工的关系是" name="inner_recommend_relation" class="form-control">
+            </span>
+                    </label>
+                </div>
+                <div class="label-box">
+                    您是否有亲友在本公司工作：
+                    <label for="rf1" class="radio">
+                        <input type="radio" name="has_family_member" id="rf1" value="0"> 无
+                        <i></i>
+                    </label>
+                    <label for="rf2" class="radio">
+                        <input type="radio" name="has_family_member" id="rf2" value="1"> 有
+                        <i></i>
+                        <span class="other">
+              <input type="text" placeholder="姓名" name="family_member_name" class="form-control">
+              <input type="text" placeholder="职务" name="family_member_job" class="form-control">
+              <input type="text" placeholder="关系" name="family_member_relation" class="form-control">
+            </span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="ibox">
+            <div class="ibox-title">
+                <h5>本人声明</h5>
+                <div class="ibox-tools">
+                    <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                </div>
+            </div>
+            <div class="ibox-content">
+                <p>1、所填写的内容及所涉及的资料全部属实，无任何虚假信息，面试通过后，同意本公司做相应的背景调查；</p>
+                <p>2、本人承诺在本公司入职前已和原公司解除劳动关系，并非以兼职的形式入职；</p>
+                <p>3、本人保证与前单位签订的竞业禁止协议与本公司工作无任何冲突；</p>
+                <p>4、本人同意公司针对此表所填信息及所涉及的资料的真实性所进行的调查核实行为；</p>
+                <p>5、经公司调查核实，若此表所填信息和所涉及的资料有失实成份，公司有权解除本人受聘职务或按照公司管理制度做出的处理，本人承担一切后果。</p>
+            </div>
+        </div>
+
+    </div>
+</form>
+<div class="foot">
+    <a class="btn btn-primary" href="javascript:;" onclick="submit();">提交</a>
+</div>
+
+
+<!-- 添加工作经历弹窗 -->
+<div id="workModal" class="modal fade" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <h3 class="m-t-none m-b text-center">添加工作经历</h3>
+                <div class="form-group">
+                    <label>起止时间 <span style="color: #ff0101">（必填）</span></label>
+                    <input type="text" placeholder="格式：2020.01-2020.06" id="workTime" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>工作单位名称 <span style="color: #ff0101">（必填）</span></label>
+                    <input type="text" placeholder="" id="workName" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>职务 <span style="color: #ff0101">（必填）</span></label>
+                    <input type="text" placeholder="" id="workTitle" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>离职原因 <span style="color: #ff0101">（必填）</span></label>
+                    <input type="text" placeholder="" id="workOrigin" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>薪资 <span style="color: #ff0101">（必填）</span></label>
+                    <input type="text" placeholder="" id="workSalary" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>证明人/联系方式(座机)<span style="color: #ff0101">（必填）</span></label>
+                    <input type="text" placeholder="" id="workWitness" class="form-control">
+                </div>
+                <div class="text-center">
+                    <a class="btn btn-white btn-cancel" onclick="$('#workModal').modal('hide')"
+                       href="javascript:;">取消</a>
+                    <a class="btn btn-primary" id="submitWork" href="javascript:;">确认添加</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 添加教育经历弹窗 -->
+<div id="educationModal" class="modal fade" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <h3 class="m-t-none m-b text-center">添加教育经历</h3>
+                <div class="form-group">
+                    <label>起止时间 <span style="color: #ff0101">（必填）</span></label>
+                    <input type="text" placeholder="格式：2020.01-2020.06" id="eTime" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>学校名称 <span style="color: #ff0101">（必填）</span></label>
+                    <input type="text" placeholder="" id="eName" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>专业 <span style="color: #ff0101">（必填）</span></label>
+                    <input type="text" placeholder="" id="eSpecialty" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>学历 <span style="color: #ff0101">（必填）</span></label>
+                    <input type="text" placeholder="" id="eEducation" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>学位 <span style="color: #ff0101">（必填）</span></label>
+                    <input type="text" placeholder="" id="eLevel" class="form-control">
+                </div>
+                <div class="text-center">
+                    <a class="btn btn-white btn-cancel" onclick="$('#educationModal').modal('hide')"
+                       href="javascript:;">取消</a>
+                    <a class="btn btn-primary" id="submitEducation" href="javascript:;">确认添加</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 添加培训情况弹窗 -->
+<div id="trainingModal" class="modal fade" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <h3 class="m-t-none m-b text-center">添加培训情况</h3>
+                <div class="form-group">
+                    <label>起止时间 <span style="color: #ff0101">（必填）</span></label>
+                    <input type="text" placeholder="格式：2020.01-2020.06" id="trainingTime" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>培训/主办单位 <span style="color: #ff0101">（必填）</span></label>
+                    <input type="text" placeholder="" id="unit" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>培训内容 <span style="color: #ff0101">（必填）</span></label>
+                    <input type="text" placeholder="" id="content" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>所获证书</label>
+                    <input type="text" placeholder="" id="certificate" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>证书编号</label>
+                    <input type="text" placeholder="" id="serial" class="form-control">
+                </div>
+                <div class="text-center">
+                    <a class="btn btn-white btn-cancel" onclick="$('#trainingModal').modal('hide')" href="javascript:;">取消</a>
+                    <a class="btn btn-primary" id="submitTraining" href="javascript:;">确认添加</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 添加家庭资料弹窗 -->
+<div id="familyModal" class="modal fade" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <h3 class="m-t-none m-b text-center">添加家庭资料</h3>
+                <div class="form-group">
+                    <label>姓名 <span style="color: #ff0101">（必填）</span></label>
+                    <input type="text" placeholder="" id="familyName" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>联系电话 <span style="color: #ff0101">（必填）</span></label>
+                    <input type="text" placeholder="" id="familyTel" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>家庭成员与本人关系 <span style="color: #ff0101">（必填）</span></label>
+                    <input type="text" placeholder="" id="familyRelation" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>工作单位 <span style="color: #ff0101">（必填）</span></label>
+                    <input type="text" placeholder="" id="familyUnit" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>职务 <span style="color: #ff0101">（必填）</span></label>
+                    <input type="text" placeholder="" id="familyTitle" class="form-control">
+                </div>
+                <div class="text-center">
+                    <a class="btn btn-white btn-cancel" onclick="$('#familyModal').modal('hide')" href="javascript:;">取消</a>
+                    <a class="btn btn-primary" id="submitFamily" href="javascript:;">确认添加</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 全局js -->
+<script src="/frontstatic/common/js/jquery.min.js?v=2.1.4"></script>
+<script src="/frontstatic/common/js/bootstrap.min.js?v=3.3.6"></script>
+<!-- 自定义js -->
+<script src="/frontstatic/jobseekermaterial/js/content.js?v=1.0.0"></script>
+<script>
+    //添加工作经历
+    var history_job = [];
+    $('#submitWork').on('click', function () {
+        var html = '';
+        time = $('#workTime').val(),
+            name = $('#workName').val(),
+            title = $('#workTitle').val(),
+            origin = $('#workOrigin').val(),
+            salary = $('#workSalary').val(),
+            witness = $('#workWitness').val();
+        if (!time || !name || !title || !origin || !salary || !witness) {
+            alert('必填字段不能为空！');
+            return false;
+        }
+        ;
+        html += '<div class="row">';
+        html += '<div class="col-sm-2">' + time + '</div>';
+        html += '<div class="col-sm-2">' + name + '</div>';
+        html += '<div class="col-sm-2">' + title + '</div>';
+        html += '<div class="col-sm-2">' + origin + '</div>';
+        html += '<div class="col-sm-2">' + salary + '</div>';
+        html += '<div class="col-sm-2">' + witness + '</div>';
+        html += '</div><div class="hr-line-dashed"></div>';
+        $('#workList').append(html);
+        $('#workModal .form-control').val('');
+        $('#workModal').modal('hide')
+        history_job.push({
+            'company': name,
+            'job': title,
+            'time': time,
+            'leave_reason': origin,
+            'salary': salary,
+            'witness': witness
+        })
+    });
+
+    //添加教育经历
+    var history_education = [];
+    $('#submitEducation').on('click', function () {
+        var html = '';
+        time = $('#eTime').val(),
+            name = $('#eName').val(),
+            specialty = $('#eSpecialty').val(),
+            education = $('#eEducation').val(),
+            level = $('#eLevel').val();
+        if (!time || !name || !specialty || !education || !level) {
+            alert('必填字段不能为空！');
+            return false;
+        };
+        html += '<div class="row">';
+        html += '<div class="col-sm-2">' + time + '</div>';
+        html += '<div class="col-sm-4">' + name + '</div>';
+        html += '<div class="col-sm-2">' + specialty + '</div>';
+        html += '<div class="col-sm-2">' + education + '</div>';
+        html += '<div class="col-sm-2">' + level + '</div>';
+        html += '</div><div class="hr-line-dashed"></div>';
+        $('#education').append(html);
+        $('#educationModal .form-control').val('');
+        $('#educationModal').modal('hide');
+        history_education.push({
+            'school': name,
+            'specialty': specialty,
+            'education': education,
+            'degree': level,
+            'time': time
+        })
+    });
+
+    //添加培训情况
+    var history_train = [];
+    $('#submitTraining').on('click', function () {
+        var html = '';
+        time = $('#trainingTime').val(),
+            unit = $('#unit').val(),
+            content = $('#content').val(),
+            certificate = $('#certificate').val(),
+            serial = $('#serial').val();
+        if (!time || !unit || !content) {
+            alert('必填字段不能为空！');
+            return false;
+        }
+        ;
+        html += '<div class="row">';
+        html += '<div class="col-sm-2">' + time + '</div>';
+        html += '<div class="col-sm-3">' + unit + '</div>';
+        html += '<div class="col-sm-3">' + content + '</div>';
+        html += '<div class="col-sm-2">' + certificate + '</div>';
+        html += '<div class="col-sm-2">' + serial + '</div>';
+        html += '</div><div class="hr-line-dashed"></div>';
+        $('#training').append(html);
+        $('#trainingModal .form-control').val('');
+        $('#trainingModal').modal('hide')
+        history_train.push({
+            'trainer': unit,
+            'content': content,
+            'time': time,
+            'certificate': certificate,
+            'certificate_number': serial
+        })
+    });
+
+    //添加家庭资料
+    var family_members = [];
+    $('#submitFamily').on('click', function () {
+        var html = '';
+        name = $('#familyName').val(),
+            tel = $('#familyTel').val(),
+            relation = $('#familyRelation').val(),
+            unit = $('#familyUnit').val(),
+            title = $('#familyTitle').val();
+        if (!name || !tel || !relation || !unit || !title) {
+            alert('必填字段不能为空！');
+            return false;
+        }
+        ;
+        html += '<div class="row">';
+        html += '<div class="col-sm-2">' + name + '</div>';
+        html += '<div class="col-sm-3">' + tel + '</div>';
+        html += '<div class="col-sm-3">' + relation + '</div>';
+        html += '<div class="col-sm-2">' + unit + '</div>';
+        html += '<div class="col-sm-2">' + title + '</div>';
+        html += '</div><div class="hr-line-dashed"></div>';
+        $('#family').append(html);
+        $('#familyModal .form-control').val('');
+        $('#familyModal').modal('hide')
+        family_members.push({
+            'name': name,
+            'phone': tel,
+            'relation': relation,
+            'unit': unit,
+            'title': title
+        })
+    });
+
+    var form_validate = {
+        name_map: {
+            'apply_department': '入职部门',
+            'apply_job': '入职岗位',
+            'current_job_status': '入职前个人状态',
+            'join_date': '入职日期',
+            'current_job_pay': '目前薪资',
+            'personal_truename': '姓名',
+            'personal_truename_py': '姓名拼音（全拼）',
+            'personal_sex': '性别',
+            'personal_birthday': '出生年月',
+            'personal_nation': '民族',
+            'personal_nation_place': '籍贯',
+            'personal_politics_role': '政治面貌',
+            'personal_education': '最高学历',
+            'personal_health': '健康状况',
+            'personal_marry_status': '婚姻状况',
+            'personal_email': '电子信箱',
+            'personal_wechat': '微信号',
+            'personal_idcard_address': '身份证地址',
+            'personal_idcard': '身份证号码',
+            'personal_address': '现有效地址',
+            'personal_phone': '移动电话',
+            'emergency_contact_name': '紧急联系人',
+            'emergency_contact_relation': '与本人关系',
+            'emergency_contact_phone': '联系方式',
+        },
+        validate: function () {
+            var _this = this;
+
+            var input_arr = ['apply_department', 'apply_job', 'join_date', 'current_job_pay', 'personal_truename','personal_truename_py', 'personal_birthday', 'personal_nation',
+                'personal_nation_place', 'personal_health', 'personal_email', 'personal_wechat', 'personal_idcard_address',
+                'personal_idcard', 'personal_address', 'personal_phone', 'emergency_contact_name', 'emergency_contact_relation',
+                'emergency_contact_phone'
+            ];
+            for (var index in input_arr) {
+                if ($.trim($('input[name="' + input_arr[index] + '"]').val()) == '') {
+                    alert(_this.name_map[input_arr[index]] + '不能为空');
+                    return false;
+                }
+            }
+
+            var radio_arr = [
+                'current_job_status',
+            ];
+            for (var index in radio_arr) {
+                if ($('input[name="' + radio_arr[index] + '"]:checked').val() == undefined) {
+                    alert(_this.name_map[radio_arr[index]] + '不能为空');
+                    return false;
+                }
+            }
+
+            if (history_job.length < 1) {
+                alert('工作经历不能为空');
+                return false;
+            }
+            if (history_education.length < 1) {
+                alert('教育经历不能为空');
+                return false;
+            }
+            if (family_members.length < 1) {
+                alert('家庭资料不能为空');
+                return;
+            }
+
+            if (+$('select[name="social_insurance_is_pay"]').val() == 1 && ($('input[name="social_insurance_city"]').val() == '' || $('input[name="social_insurance_start_date"]').val() == '' || $('input[name="social_insurance_end_date"]').val() == '')) {
+                alert('请输入投保城市和时间');
+                return false;
+            }
+            if (+$('select[name="housing_fund_is_pay"]').val() == 1 && ($('input[name="housing_fund_city"]').val() == '' || $('input[name="housing_fund_company"]').val() == '')) {
+                alert('请输入公积金投缴城市和单位');
+                return false;
+            }
+            if ($('input[name="join_channel"]:checked').val() == '互联网' && $('input[name="join_channel_web"]').val() == '') {
+                alert('请输入入职渠道网站名');
+                return false;
+            } else if ($('input[name="join_channel"]:checked').val() == '其他' && $('input[name="join_channel_other"]').val() == '') {
+                alert('请输入入职渠道其他来源');
+                return;
+            }
+            if (+$('input[name="is_inner_recommend"]:checked').val() == 1 && ($('input[name="inner_recommend_name"]').val() == '' || $('input[name="inner_recommend_relation"]').val() == '')) {
+                alert('请输入推荐员工姓名和关系');
+                return false;
+            }
+            if (+$('input[name="has_family_member"]:checked').val() == 1 && ($('input[name="family_member_name"]').val() == '' || $('input[name="family_member_relation"]').val() == '' || $('input[name="family_member_job"]').val() == '')) {
+                alert('请输入亲友员工姓名，职务和关系');
+                return false;
+            }
+
+            return true;
+        }
+    }
+
+    function getParamUrl(param, string) {
+        try {
+            var re = new RegExp("" + param + "=([^&?]*)", "ig");
+            return ((string.match(re)) ? (decodeURIComponent(string.match(re)[0].substr(param.length + 1))) : '');
+        } catch (_e) {
+            return '';
+        }
+    }
+
+
+    //表单提交
+    function submit() {
+        var token = getParamUrl('token', window.location.href);
+        if (token == '') {
+            alert('非法请求');return;
+        }
+
+        if (!form_validate.validate()) return;
+
+        var form_data = {
+            'apply_department': $('input[name="apply_department"]').val(),
+            'apply_job': $('input[name="apply_job"]').val(),
+            'current_job_status': $('input[name="current_job_status"]:checked').val(),
+            'join_date': $('input[name="join_date"]').val(),
+            'current_job_pay': $('input[name="current_job_pay"]').val(),
+            'personal_truename': $('input[name="personal_truename"]').val(),
+            'personal_truename_py': $('input[name="personal_truename_py"]').val(),
+            'personal_sex': $('select[name="personal_sex"]').val(),
+            'personal_birthday': $('input[name="personal_birthday"]').val(),
+            'personal_nation': $('input[name="personal_nation"]').val(),
+            'personal_nation_place': $('input[name="personal_nation_place"]').val(),
+            'personal_politics_role': $('select[name="personal_politics_role"]').val(),
+            'personal_education': $('select[name="personal_education"]').val(),
+            'personal_health': $('input[name="personal_health"]').val(),
+            'personal_marry_status': $('select[name="personal_marry_status"]').val(),
+            'personal_email': $('input[name="personal_email"]').val(),
+            'personal_wechat': $('input[name="personal_wechat"]').val(),
+            'personal_idcard_address': $('input[name="personal_idcard_address"]').val(),
+            'personal_idcard': $('input[name="personal_idcard"]').val(),
+            'personal_address': $('input[name="personal_address"]').val(),
+            'personal_phone': $('input[name="personal_phone"]').val(),
+            'emergency_contact_name': $('input[name="emergency_contact_name"]').val(),
+            'emergency_contact_relation': $('input[name="emergency_contact_relation"]').val(),
+            'emergency_contact_phone': $('input[name="emergency_contact_phone"]').val(),
+            'social_household_type': $('select[name="social_household_type"]').val(),
+            'history_education': history_education,
+            'history_job': history_job,
+            'history_train': history_train,
+            'family_members': family_members,
+        };
+
+        if (+$('select[name="social_insurance_is_pay"]').val() == 1) {
+            form_data.social_insurance_is_pay = 1;
+            form_data.social_insurance_city = $('input[name="social_insurance_city"]').val();
+            form_data.social_insurance_start_date = $('input[name="social_insurance_start_date"]').val();
+            form_data.social_insurance_end_date = $('input[name="social_insurance_end_date"]').val();
+        } else {
+            form_data.social_insurance_is_pay = 0;
+            form_data.social_insurance_city = '';
+            form_data.social_insurance_start_date = '';
+            form_data.social_insurance_end_date = '';
+        }
+        if (+$('select[name="housing_fund_is_pay"]').val() == 1) {
+            form_data.housing_fund_is_pay = 1;
+            form_data.housing_fund_city = $('input[name="housing_fund_city"]').val();
+            form_data.housing_fund_company = $('input[name="housing_fund_company"]').val();
+        } else {
+            form_data.housing_fund_is_pay = 0;
+            form_data.housing_fund_city = '';
+            form_data.housing_fund_company = '';
+        }
+        if ($('input[name="join_channel"]:checked').val() != undefined) {
+            form_data.join_channel = $('input[name="join_channel"]:checked').val();
+        } else {
+            form_data.join_channel = '';
+        }
+        if ($('input[name="join_channel"]:checked').val() == '互联网') {
+            form_data.join_channel_name = $('input[name="join_channel_web"]').val();
+        } else if ($('input[name="join_channel"]:checked').val() == '其他') {
+            form_data.join_channel_name = $('input[name="join_channel_other"]').val();
+        } else {
+            form_data.join_channel_name = '';
+        }
+        if (+$('input[name="is_inner_recommend"]:checked').val() == 1) {
+            form_data.inner_recommend_name = $('input[name="inner_recommend_name"]').val();
+            form_data.inner_recommend_relation = $('input[name="inner_recommend_relation"]').val();
+        } else {
+            form_data.inner_recommend_name = '';
+            form_data.inner_recommend_relation = '';
+        }
+        if (+$('input[name="has_family_member"]:checked').val() == 1) {
+            form_data.family_member_name = $('input[name="family_member_name"]').val();
+            form_data.family_member_job = $('input[name="family_member_job"]').val();
+            form_data.family_member_relation = $('input[name="family_member_relation"]').val();
+        } else {
+            form_data.family_member_name = '';
+            form_data.family_member_job = '';
+            form_data.family_member_relation = '';
+        }
+        console.log(form_data)
+        $.ajax({
+            url: 'http://hr.tanwan.com/index.php?p=frontend&c=jobSeekerMaterial&m=submit',
+            method: 'post',
+            data: {
+                token: token,
+                data: JSON.stringify(form_data)
+            },
+            dataType: 'json',
+            success: function (res) {
+                alert(res.msg);
+            }
+        })
+    }
+</script>
+</body>
+</html>
